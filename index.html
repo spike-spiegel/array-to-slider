@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>slider test</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container">
+    <a href="#" class="main-header__link">Reload</a>
+  </div>
+</header>
+
+  <section class="intro">
+    <div class="container">
+      <h2 class="intro__caption">Слайдер из массива ссылок</h2>
+     
+        <div class="intro__text">
+          <input class="intro__input" type="text" id="text-field">
+          <button class="btn" id="upload_photos">Save</button>          
+        </div>
+        
+ 
+    </div>
+  </section>
+
+  <section class="upload-images">
+    <div class="container">
+      <ul class="upload-images__wrap">
+    
+      </ul>
+    </div>
+  </section>
+
+  <section class="slider">
+    
+  </section>
+
+  <script id="image-template" type="text/html">
+      <div class="upload-images__img-wrap">
+        <img src="{{image}}" class="upload-images__img">
+      </div>
+      <div class="upload-images__comm-wrap">
+        <p class="upload-images__comment">Комментарий</p>
+        <input class="upload-images__input" type="text" id="comment">
+      </div>
+      <a href="#" class="upload-images__del-link">Удалить</a>
+  </script>
+
+  <script id="slider-template" type="text/html">
+      <div class="slider__item">
+        <img src="{{image}}" class="slider__img">
+        <p class="slider__comment">{{text}}</p>
+      </div>      
+  </script>
+
+  
+  <script src="js/mustache.min.js"></script> 
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
